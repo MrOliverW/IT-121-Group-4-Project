@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@600&family=Inter:wght@600&family=Manrope:wght@700&family=Noto+Sans:ital,wght@0,400;1,100&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: flex;
+}
+
+a{ 
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Cormorant', serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Noto Sans', sans-serif; 
+    background-color:rgb(10, 15, 19)
+}
+
+nav{ 
+    max-width: 600px;
+    margin: none;
+    padding: 2rem 1rem; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    
+}
+
+.nav-links{ 
+    list-style: none;
+    display: flex; 
+    align-items: center;
+    gap: 4rem;
+
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: rgb(247, 247, 247)
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(245, 203, 54, 0.993);
+    transition: all 0.3s ease;
+
+}
+
+.link a:hover::after{
+    width: 70%;
+
+}
+
+.container{
+    max-width: 2500px;
+    margin: 20rem 2rem;
+    padding: 5rem 2rem;
+}
+
+.blur{
+    position: absolute;
+    box-shadow: 0 0 1500px 50px rgb(42, 17, 109)
+}
+
+header {
+    position: relative;
+    padding-top: 2rem; 
+    grid-template-columns: repeat(2,1fe);
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content h2{ 
+    margin-bottom: 1rem; 
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+header .content p{
+    margin-bottom: 6rem; 
+    color: #ccc
+}
+
+section .projects{
+    margin-bottom: 4rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.features{
+    margin-top: 5rem;
+    display:flex;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.features .card{
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.features .card:hover{
+    background-color: #323232;
+    border-color: #fff; 
+}
+
+.features .card span{
+    display: inline-block;
+    background-color: #1e40af;
+    padding-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.features .card h4{
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem; 
+    font-weight: 600;
+}
+
+.features .card p{
+    color: #ccc;
+    margin-bottom: 1rem;  
+}
+
+
+.features .card a{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.features .card a:hover{
+    color: rgb(18, 61, 202);
+}
