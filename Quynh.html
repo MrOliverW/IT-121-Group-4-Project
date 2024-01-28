@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quynh's Hobbies</title><!--title and css references-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <script type="text/javascript" src="quynhsalert.js"></script>
 </head>
+
 <body>
+    <header><!--website header-->
+    <h1>About Quynh</h1>
+        <nav class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Home</a>
+            <a href="Marcella.html" target="_blank">Marcella</a>
+            <a href="Oliver.html" target="_blank">Oliver</a>
+            <a href="Quynh.html" target="_blank">Quynh</a>
+            <a href="Phuc.html" target="_blank">Phuc</a>
+            <a href="Isidro.html" target="_blank">Isidro</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </nav>
+    </header>
+     
+<main class="wrapper">
+    <picture class="profile">
+        <source media="(min-width: 1200px)" srcset="images/quynh.jpg">
+        <img src="images/mobile-quynh.jpg" alt="hi there">
+    </picture> 
+
+    <h2 class="subheader">Welcome to my page!</h2><!--hobbies section-->
+        <audio src="audio/quynhaudio.mp3" controls> <!--media tag to support audio--></audio>
+        <p>Here are some things I like to do in my free time:</p>                
+        <!--list hobbies along with description-->
+        <li>Cooking</li>
+        <p>Cooking is my destresser. Here is a photo of pho I made!</p>
+        <img src="images\cooking.jpg" alt="photo of pho">
+        <li>Gaming</li>
+        <p>This is my PC and I am obsessed! My current favorite games are League of Legends, Bloons TD 6, and Palworld.</p>
+        <img src="images\gaming.jpg" alt=" PC photo">
+        <li>Hiking</li>
+        <p>During the warmer months, I enjoy searching for beautiful lakes with my partner.</p>
+        <img src="images\hiking.jpg" alt="hiking photo">
+        <img src="images\hike.jpg" alt="other hiking photo">
+
+    <footer>
+        <p><small>&copy; 2021-<span id="this-year"></span> by 
+        Marcella Touch, Oliver Warlick, Quynh Nguyen, Phuc Nguyen, Isidro Lucatero, All Rights Reserved ~ 
+            <a id="html-checker" href="#" target="_blank">Check HTML</a> ~ 
+            <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
+        </p>
+    </footer>
+</main>
+     
+  <!-- Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon -->
+<script>
+    //https://tinyurl.com/dynamic-html-checker
+    document.getElementById("html-checker").setAttribute("href","https://validator.w3.org/nu/?doc=" + location.href);
+      
+    document.getElementById("css-checker").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href); 
+     
+     //set current year in span with id of this-year
+     let d = new Date(); let thisYear = d.getFullYear();
+     document.getElementById("this-year").innerHTML = thisYear;
     
+    //manages mobile nav 
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }   
+</script> 
 </body>
 </html>
