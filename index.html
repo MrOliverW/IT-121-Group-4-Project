@@ -48,6 +48,15 @@
            
       <p>You are gonna love our hobbies!</p>
 <!--List Items-->
+
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit" onclick="wawa()">
+</form> 
+
     <p> What are your favorite hobbies?
         </p>
 
@@ -84,6 +93,15 @@
             x.className = "topnav";
         }
     }   
+
+    var a = document.getElementById('fname').value;
+    var b = document.getElementById('lname').value;
+
+function wawa() {
+  alert( "Welcome to our page " + a + " "+b);
+  
+}
+
  </script>
      
  </body>
