@@ -1,4 +1,4 @@
-<style>
+
     @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@600&family=Inter:wght@600&family=Manrope:wght@700&family=Noto+Sans:ital,wght@0,400;1,100&display=swap');
 
 *{
@@ -157,4 +157,3 @@ section .projects{
 .features .card a:hover{
     color: rgb(18, 61, 202);
 }
-</style>
