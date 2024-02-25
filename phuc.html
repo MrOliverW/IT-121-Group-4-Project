@@ -8,6 +8,8 @@
 
 </head>
 <body>
+
+    
     <nav class="navbar">
         <div class="navbar__toggle" id="website-menu">
             <span class="bar"></span>
@@ -79,9 +81,76 @@
             </div>
         </div>
     </section>
+ 
+    <head>
+        <title>JavaScript</title>
+        <style>
+            .clock {
+                background-color: blue;
+                width: 400px;
+                text-align: center;
+                color: white;
+                font-size: 1em;
+            }
+            .clock>span {
+                padding: 10px;
+                border-radius: 10px;
+                background-color: black;
+            }
+            .clock>span>span {
+                padding: 5px;
+                border-radius: 10px;
+                background-color: red;
+            }
+            input {
+                padding: 15px;
+                margin: 20px;
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <input type="date" name="endDate">
+            <div class="clock"> <span><span class="days">0</span> Days</span> <span><span class="hours">0</span>
+                    Hours</span> <span><span class="minutes">0</span> Minutes</span> <span><span class="seconds">0</span>
+                    Seconds</span>
+            </div>
+        </div>
+        <script>
+             // Function to update the countdown clock
+        function updateClock() {
+            // Get the end date from the input
+            const endDateInput = document.getElementById('endDateInput');
+            const endDate = new Date(endDateInput.value).getTime();
 
+            // Get the current date and time
+            const now = new Date().getTime();
 
-    <script src="app.js"></script>
+            // Calculate the time remaining
+            const distance = endDate - now;
+
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Update the HTML elements
+            document.querySelector('.days').textContent = days;
+            document.querySelector('.hours').textContent = hours;
+            document.querySelector('.minutes').textContent = minutes;
+            document.querySelector('.seconds').textContent = seconds;
+        }
+
+        // Initial call to update the clock
+        updateClock();
+
+        // Update the clock every second
+        const countdownInterval = setInterval(updateClock, 1000);
+        </script>
+    </body>
+
 
 </body>
 
