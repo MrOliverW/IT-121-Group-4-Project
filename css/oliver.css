@@ -13,3 +13,15 @@
   border-radius: 5px;
   z-index: 999; /* Ensure it appears above other content */
 }
+
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .topnav {
+    flex-direction: column;
+  }
+}

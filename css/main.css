@@ -54,6 +54,18 @@ footer {
     text-align: center;
     padding: 1em;
 }
+/*<!--Responsive Layout with Flexbox and Media Queries:-->*/
+.topnav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  @media (max-width: 768px) {
+    .topnav {
+      flex-direction: column;
+    }
+  }
 
 /* Responsive rules */
 
