@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+    <title>Countdown Timer</title>
+    <style>
+        .clock {
+            background-color: blue;
+            width: 400px;
+            text-align: center;
+            color: white;
+            font-size: 1em;
+        }
+        .clock>span {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: black;
+        }
+        .clock>span>span {
+            padding: 5px;
+            border-radius: 10px;
+            background-color: red;
+        }
+        input {
+            padding: 15px;
+            margin: 20px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="date" name="endDate">
+        <div class="clock"> <span><span class="days">0</span> Days</span> <span><span class="hours">0</span>
+                Hours</span> <span><span class="minutes">0</span> Minutes</span> <span><span class="seconds">0</span>
+                Seconds</span>
+        </div>
+    </div>
+    <script>
+        // Selecting page elements
+        const endDateInput = document.querySelector('input[name="endDate"]');
+        const clockOutput = document.querySelector('.clock');
+        
+        // Creating variables
+        let timerInterval;
+        let clockRunning = false;
+
+        // Checking local storage
+        const storedEndDate = localStorage.getItem('countdownEndDate');
+        if (storedEndDate) {
+            endDateInput.value = storedEndDate;
+            startClock(storedEndDate);
+        }
+
+        // Adding event listener
+        endDateInput.addEventListener('change', function() {
+            clearInterval(timerInterval);
+            localStorage.setItem('countdownEndDate', endDateInput.value);
+            startClock(endDateInput.value);
+        });
+
+        // Start the clock function
+        function startClock(endDate) {
+            updateClock(endDate);
+
+            timerInterval = setInterval(function() {
+                updateClock(endDate);
+            }, 1000);
+        }
+
+        // Update the clock function
+        function updateClock(endDate) {
+            const timeLeft = getTimeLeft(endDate);
+            
+            if (timeLeft.total <= 0) {
+                clearInterval(timerInterval);
+                return;
+            }
+
+            clockOutput.innerHTML = `
+                <span><span class="days">${timeLeft.days}</span> Days</span>
+                <span><span class="hours">${timeLeft.hours}</span> Hours</span>
+                <span><span class="minutes">${timeLeft.minutes}</span> Minutes</span>
+                <span><span class="seconds">${timeLeft.seconds}</span> Seconds</span>
+            `;
+        }
+
+        // Calculate time left function
+        function getTimeLeft(endDate) {
+            const currentTime = new Date().getTime();
+            const endTime = new Date(endDate).getTime();
+            const total = endTime - currentTime;
+            const seconds = Math.floor((total / 1000) % 60);
+            const minutes = Math.floor((total / 1000 / 60) % 60);
+            const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+            const days = Math.floor(total / (1000 * 60 * 60 * 24));
+
+            return {
+                total,
+                days,
+                hours,
+                minutes,
+                seconds
+            };
+        }
+    </script>
+</body>
+</html>
