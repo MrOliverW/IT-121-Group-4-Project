@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Phuc Hobbies</title>
     <link rel="stylesheet" href="phuc.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.10/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEqGy83Qpoxe6JzOagOOAzLj4pahaXe4c&callback=console.debug&libraries=maps,marker&v=beta"></script>
+
 
 </head>
 <body>
@@ -39,6 +45,7 @@
             </li>
         </ul>
     </nav>
+
 
     <header class="container">
         <div class="content">
@@ -81,6 +88,9 @@
             </div>
         </div>
     </section>
+
+    <div id="map" style="height: 400px; width: 100%;"></div>
+    <div id="map"></div>
  
     <head>
         <title>JavaScript</title>
@@ -109,6 +119,27 @@
             }
         </style>
     </head>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" id="navbarBrand">MapApp</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggler">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" id="navHome">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <gmp-map center="40.12150192260742,-100.45039367675781" zoom="4" map-id="DEMO_MAP_ID">
+        <gmp-advanced-marker position="40.12150192260742,-100.45039367675781" title="My location"></gmp-advanced-marker>
+    </gmp-map>
+
+
+    <div id="mapContainer" class="map-container"></div>
     <body>
         <div>
             <input type="date" name="endDate">
@@ -153,5 +184,28 @@
 
 
 </body>
+
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEqGy83Qpoxe6JzOagOOAzLj4pahaXe4c&callback=console.debug&libraries=maps,marker&v=beta"></script>
+    <script>
+    function initMap() {
+    // Map options
+    var options = {
+        zoom: 4,
+        center: {lat: 40.1215, lng: -100.4504} // Coordinates of the center of the map
+    }
+
+    // New map
+    var map = new google.maps.Map(document.getElementById('map'), options);
+
+    // Add marker
+    var marker = new google.maps.Marker({
+        position: {lat: 40.1215, lng: -100.4504},
+        map: map,
+        title: 'My location'
+    });
+}
+
+$.getScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyCEqGy83Qpoxe6JzOagOOAzLj4pahaXe4c&callback=initMap');
+    </script>
 
 </html> 
