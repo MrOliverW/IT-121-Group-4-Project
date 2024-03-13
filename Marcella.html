@@ -1,63 +1,117 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/marcella.css">
-    <title>Marcella's Hobbies</title>
-</head>
-<body>
-    <div class="header">
-        <h2>IT121 Group project</h2>
-        <p>owo</p>
-      </div>
-      
-      <div id="navbar">
-        <a class="active" href="index.html">Home</a>
-        <a href="javascript:void(0)">LinkedIn</a>
-        <a href="javascript:void(0)">Github</a>
-      </div>
-    
-    
+ <head>
+   <!-- Website Title and references to CSS files -->
+     <title>Marcella's Hobbies</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/forms.css">
+<!--reference to javascript file -->
+  <script type="text/javascript" src="oliversAlert.js"></script>
+  <!--adds a google font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=[roboto]:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 
-    <div class="keke">
-    <h1 class="content">Marcella's Hobbies</h1>
-    <h2 class="content">Crochet</h2>
-    <p class="content">Pellentesque pulvinar gravida justo nec porttitor. Nunc purus arcu, tristique a facilisis quis, porta in ante. Duis at metus ac dolor scelerisque lacinia at id diam. Etiam auctor purus urna, vitae sodales nulla dictum et. Ut sit amet dui felis. Quisque posuere, nibh ac sagittis finibus, nunc metus hendrerit augue, nec tempus tortor purus non velit. Ut rutrum feugiat auctor. Donec at ex aliquet, venenatis odio in, venenatis augue. Vestibulum viverra tristique ipsum, eu pulvinar eros ullamcorper eget. Ut vel diam turpis. Ut vel dignissim felis, non imperdiet neque. Ut ultrices, erat vel dictum tincidunt, mauris nunc posuere ipsum, ut pellentesque mauris odio et mauris. Sed nunc tortor, aliquam a eros ut, ullamcorper maximus purus.</p>
 
-<iframe class ="content" width="560" height="315" src="https://www.youtube.com/embed/u8dr2bjUKxo?si=MtPBmGVfBjf7xr9k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-    <table class="content"> <!--table tag requirement-->
-        <tr>
-            <th>Type of stitch</th>
-            <th>Best uses</th>
-            <th>Properties</th>
-        </tr>
-        <tr>
-            <td>Double crochet</td>
-            <td>sweaters, scarfs, blankets</td>
-            <td>Easy to work up fabric in a short period of time.</td>
-        </tr>
-        <tr>
-            <td>Half-double crochet</td>
-            <td>sweaters, tops, hats</td>
-            <td>Has the quickness of double crochet and the ease of single crochet.</td>
+ </head>
+ <body>
+    <!--Website Header-->
+     <header>
+     <h1>Marcella's Hobbies</h1>
+        <nav class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Home</a>
+            <a href="Marcella.html" target="_blank">Marcella</a>
+            <a href="Oliver.html" target="_blank">Oliver</a>
+            <a href="Quynh.html" target="_blank">Quynh</a>
+            <a href="Phuc.html" target="_blank">Phuc</a>
+            <a href="Isidro.html" target="_blank">Isidro</a>
 
-        </tr>
-        <tr>
-            <td>Single crochet</td>
-            <td>amiguri, hats, pixel-art</td>
-            <td>Fast to stitch, but takes a long time to work up fabric.</td>
-
-        </tr>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </nav>
+     </header>
+     
+     <!--This is where the current main photo lives -->
+   <main class="wrapper">
+        <picture class="profile">
+            <img src="images/marcella.JPG" alt="That's me!">
+            
+        </picture>   
+        <!--About me section-->
+       
+       <div class="keke">
         
-    </table>
-    <h2>Weightlifting</h2>
-    <p id="p2">Pellentesque pulvinar gravida justo nec porttitor. Nunc purus arcu, tristique a facilisis quis, porta in ante. Duis at metus ac dolor scelerisque lacinia at id diam. Etiam auctor purus urna, vitae sodales nulla dictum et. Ut sit amet dui felis. Quisque posuere, nibh ac sagittis finibus, nunc metus hendrerit augue, nec tempus tortor purus non velit. Ut rutrum feugiat auctor. Donec at ex aliquet, venenatis odio in, venenatis augue. Vestibulum viverra tristique ipsum, eu pulvinar eros ullamcorper eget. Ut vel diam turpis. Ut vel dignissim felis, non imperdiet neque. Ut ultrices, erat vel dictum tincidunt, mauris nunc posuere ipsum, ut pellentesque mauris odio et mauris. Sed nunc tortor, aliquam a eros ut, ullamcorper maximus purus.</p>
+        <h2 class="content">Crochet</h2>
+        <p class="content">Pellentesque pulvinar gravida justo nec porttitor. Nunc purus arcu, tristique a facilisis quis, porta in ante. Duis at metus ac dolor scelerisque lacinia at id diam. Etiam auctor purus urna, vitae sodales nulla dictum et. Ut sit amet dui felis. Quisque posuere, nibh ac sagittis finibus, nunc metus hendrerit augue, nec tempus tortor purus non velit. Ut rutrum feugiat auctor. Donec at ex aliquet, venenatis odio in, venenatis augue. Vestibulum viverra tristique ipsum, eu pulvinar eros ullamcorper eget. Ut vel diam turpis. Ut vel dignissim felis, non imperdiet neque. Ut ultrices, erat vel dictum tincidunt, mauris nunc posuere ipsum, ut pellentesque mauris odio et mauris. Sed nunc tortor, aliquam a eros ut, ullamcorper maximus purus.</p>
+    
+    <iframe class ="content" width="560" height="315" src="https://www.youtube.com/embed/u8dr2bjUKxo?si=MtPBmGVfBjf7xr9k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+        <table class="content"> <!--table tag requirement-->
+            <tr>
+                <th>Type of stitch</th>
+                <th>Best uses</th>
+                <th>Properties</th>
+            </tr>
+            <tr>
+                <td>Double crochet</td>
+                <td>sweaters, scarfs, blankets</td>
+                <td>Easy to work up fabric in a short period of time.</td>
+            </tr>
+            <tr>
+                <td>Half-double crochet</td>
+                <td>sweaters, tops, hats</td>
+                <td>Has the quickness of double crochet and the ease of single crochet.</td>
+    
+            </tr>
+            <tr>
+                <td>Single crochet</td>
+                <td>amiguri, hats, pixel-art</td>
+                <td>Fast to stitch, but takes a long time to work up fabric.</td>
+    
+            </tr>
+            
+        </table>
+        <h2>Weightlifting</h2>
+        <p id="p2">Pellentesque pulvinar gravida justo nec porttitor. Nunc purus arcu, tristique a facilisis quis, porta in ante. Duis at metus ac dolor scelerisque lacinia at id diam. Etiam auctor purus urna, vitae sodales nulla dictum et. Ut sit amet dui felis. Quisque posuere, nibh ac sagittis finibus, nunc metus hendrerit augue, nec tempus tortor purus non velit. Ut rutrum feugiat auctor. Donec at ex aliquet, venenatis odio in, venenatis augue. Vestibulum viverra tristique ipsum, eu pulvinar eros ullamcorper eget. Ut vel diam turpis. Ut vel dignissim felis, non imperdiet neque. Ut ultrices, erat vel dictum tincidunt, mauris nunc posuere ipsum, ut pellentesque mauris odio et mauris. Sed nunc tortor, aliquam a eros ut, ullamcorper maximus purus.</p>
+    
+        <img src="images/gym.jpg" id="gym">
+        </div>
 
-    <img src="images/gym.jpg" id="gym">
-    </div>
-    <script src="script.js"></script>
-</body>
+     <footer>
+      <p><small>&copy; 2021-<span id="this-year"></span> by 
+        Marcella Touch, Oliver Warlick, Quynh Nguyen, Phuc Nguyen, Isidro Lucatero, All Rights Reserved ~ 
+          <a id="html-checker" href="#" target="_blank">Check HTML</a> ~ 
+          <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
+     </p>
+    </footer>
+  </main>
+     
+  <!-- Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon -->
+    <script>
+    //https://tinyurl.com/dynamic-html-checker
+    document.getElementById("html-checker").setAttribute("href","https://validator.w3.org/nu/?doc=" + location.href);
+      
+    document.getElementById("css-checker").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href); 
+     
+     //set current year in span with id of this-year
+     let d = new Date(); let thisYear = d.getFullYear();
+     document.getElementById("this-year").innerHTML = thisYear;
+    
+    //manages mobile nav 
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }   
+ </script>
+     
+ </body>
 </html>
+
