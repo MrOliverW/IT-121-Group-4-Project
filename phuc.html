@@ -1,167 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Phuc Hobbies</title>
-    <link rel="stylesheet" href="phuc.css"/>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.10/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+ <head>
+   <!-- Website Title and references to CSS files -->
+     <title>Phuc's Hobbies</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/forms.css">
+<!--reference to javascript file -->
+  <script type="text/javascript" src="oliversAlert.js"></script>
+  <!--adds a google font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=[roboto]:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 
 
-</head>
-<body>
+
+ </head>
+ <body>
+    <!--Website Header-->
+     <header>
+     <h1>Phuc's Hobbies</h1>
+        <nav class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Home</a>
+            <a href="Marcella.html" target="_blank">Marcella</a>
+            <a href="Oliver.html" target="_blank">Oliver</a>
+            <a href="Quynh.html" target="_blank">Quynh</a>
+            <a href="phuc.html" target="_blank">Phuc</a>
+            <a href="Isidro.html" target="_blank">Isidro</a>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </nav>
+     </header>
+     
+     <!--This is where the current main photo lives -->
+   <main class="wrapper">
+        <picture class="profile">
+            <img src="images/Phuc.jpg" alt="That's me!">
+            
+        </picture>   
+        <!--About me section-->
+       
+       <div class="keke">
+        
+        <h2 class="content">About Me</h2>
+        <p class="content">I am an aspiring Software Engineer / Backend Developer / Machine Learning Researcher and currently a student in the Year Up Program pursuing an Application Development track. I'm excited to apply my enthusiasm for coding and my problem-solving abilities to create elegant and efficient solutions to real-world problems. Welcome to my hobby's page.<b>Let's explore more!</b> </p>
+    
 
     
-    <nav class="navbar">
-        <div class="navbar__toggle" id="website-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+
+            
+        </table>
+        <h3>Tennis</h3>
+        <h3>Photography</h3>
+        <h3>Gaming</h3>
+        <h3>Reading</h3>
+        <h3>Walking</h3>
+
+    
+    
         </div>
-        <ul class="nav-links">
-            <li class="link">
-                <a href="#Home">
-                    Home 
-                </a>
-            </li>
-            <li class="link">
-                <a href="#projects">
-                    My Hobby
-                </a>
-            </li>
-            <li class="link">
-                <a href="#">
-                    About Me  
-                </a>
-            </li>
-            <li class="link">
-                <a href="#">
-                    Contact Me
-                </a>
-            </li>
-        </ul>
-    </nav>
 
-
-    <header class="container">
-        <div class="content">
-            <span class="blue"></span>
-            <span class="blue"></span>
-            <h2><ds>About Me</ds></h2>
-              <p>Hi! My name is Phuc and I am taking Application Development track at Year Up program.</p>
-        </div>
-    </header>
-
-    <section class="container">
-        <h2 class="projects">My hobby</h2>
-        <div class="features">
-            <div class="card">
-                <span><i class="ri-google-fill"></i></span>
-                <h4>Photography</h4>
-                <p>
-                    ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio impedit deserunt dolores, maiores ex nulla? Architecto odit eaque ipsum perferendis quo? Aut ipsum laborum quibusdam. Odio aliquid enim ipsa ab.
-                </p>
-                <img>
-                <a href="#">Click me</a>
-            </div>
-
-            <div class="card">
-                <span><i class="ri-gamepad-line"></i></span>
-                <h4>Reading</h4>
-                <p>
-                    ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates iusto quo et mollitia unde autem voluptate voluptas quas. Hic temporibus laborum adipisci commodi quibusdam blanditiis, est unde obcaecati voluptatum optio!  
-                </p>
-                <a href="#">Click me</a>
-            </div>
-
-            <div class="card">
-                <span><i class="ri-sketching"></i></span>
-                <h4>NA</h4>
-                <p>
-                    ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit minima dolores aperiam quae velit soluta sint magni cumque? Totam, minus voluptatum. Cum adipisci dolorum eligendi itaque, dicta qui iusto odio.
-                </p>
-                <a href="#">Click me</a>
-            </div>
-        </div>
-    </section>
-
-    <div id="map" style="height: 400px; width: 100%;"></div>
-    <div id="map"></div>
- 
-    <head>
-        <title>JavaScript</title>
-        <style>
-            .clock {
-                background-color: blue;
-                width: 400px;
-                text-align: center;
-                color: white;
-                font-size: 1em;
-            }
-            .clock>span {
-                padding: 10px;
-                border-radius: 10px;
-                background-color: black;
-            }
-            .clock>span>span {
-                padding: 5px;
-                border-radius: 10px;
-                background-color: red;
-            }
-            input {
-                padding: 15px;
-                margin: 20px;
-                font-size: 1.5em;
-            }
-        </style>
-    </head>
-
-    <body>
-        <div>
-            <input type="date" name="endDate">
-            <div class="clock"> <span><span class="days">0</span> Days</span> <span><span class="hours">0</span>
-                    Hours</span> <span><span class="minutes">0</span> Minutes</span> <span><span class="seconds">0</span>
-                    Seconds</span>
-            </div>
-        </div>
-        <script>
-             // Function to update the countdown clock
-        function updateClock() {
-            // Get the end date from the input
-            const endDateInput = document.getElementById('endDateInput');
-            const endDate = new Date(endDateInput.value).getTime();
-
-            // Get the current date and time
-            const now = new Date().getTime();
-
-            // Calculate the time remaining
-            const distance = endDate - now;
-
-            // Calculate days, hours, minutes, and seconds
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Update the HTML elements
-            document.querySelector('.days').textContent = days;
-            document.querySelector('.hours').textContent = hours;
-            document.querySelector('.minutes').textContent = minutes;
-            document.querySelector('.seconds').textContent = seconds;
+     <footer>
+      <p><small>&copy; 2021-<span id="this-year"></span> by 
+        Marcella Touch, Oliver Warlick, Quynh Nguyen, Phuc Nguyen, Isidro Lucatero, All Rights Reserved ~ 
+          <a id="html-checker" href="#" target="_blank">Check HTML</a> ~ 
+          <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
+     </p>
+    </footer>
+  </main>
+     
+  <!-- Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon -->
+    <script>
+    //https://tinyurl.com/dynamic-html-checker
+    document.getElementById("html-checker").setAttribute("href","https://validator.w3.org/nu/?doc=" + location.href);
+      
+    document.getElementById("css-checker").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href); 
+     
+     //set current year in span with id of this-year
+     let d = new Date(); let thisYear = d.getFullYear();
+     document.getElementById("this-year").innerHTML = thisYear;
+    
+    //manages mobile nav 
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
         }
+    }   
+ </script>
 
-        // Initial call to update the clock
-        updateClock();
+ <style>
+    body {
+        background-color:#006d77;
+    }
 
-        // Update the clock every second
-        const countdownInterval = setInterval(updateClock, 1000);
-        </script>
-    </body>
+    nav{
+        color: #83c5be;
+    }
 
+    head {
+        color: #edf6f9;
 
-</body>
-
-</html> 
+    }
+ </style>
+     
+ </body>
+</html>
