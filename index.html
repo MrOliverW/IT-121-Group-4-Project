@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="myApp">
  <head>
    <!-- Website Title and references to CSS files -->
   <title>Hobbies</title>
@@ -9,47 +9,53 @@
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/forms.css">
 <!--reference to javascript file -->
-  <script type="text/javascript" src="greetings.js"></script>
- </head>
- <body>
-    <!--Website Header-->
-     <header>
-     <h1>Hobbies</h1>
-        <nav class="topnav" id="myTopnav">
-            <a href="index.html" class="active">Home</a>
-            <a href="Marcella.html" target="_blank">Marcella</a>
-            <a href="Oliver.html" target="_blank">Oliver</a>
-            <a href="Quynh.html" target="_blank">Quynh</a>
-            <a href="phuc.html" target="_blank">Phuc</a>
-            <a href="Isidro.html" target="_blank">Isidro</a>
-            <a href="googlemap.html" target="_blank">Google Map</a>
-            <a href="timer.html" target="_blank">Timer</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-        </nav>
-     </header>
-     
-     <!--This is where the current main photo lives -->
-   <main class="wrapper">
-        <picture class="profile">
-            <source media="(min-width: 1200px)" srcset="images/desktop.jpg">
-            <source media="(min-width: 501px)" srcset="images/tablet.jpg">
-            <img src="images/phone.jpg" alt="That's me!"> 
-        </picture>   
-        <!--About us section-->
-       <h2 class="subheader">About Us</h2>
-       <p>Hello and welcome, thank you for being here today! This page was created by: Marcella Touch, Oliver Warlick, Quynh Nguyen, Phuc Nguyen, Isidro Lucatero .</p>
-       <p>This webpage talks about some of our favorite hobbies.</p>
-       <p>We built this site using VS Code, Miro, and GitHub.</p>
-      <p>You are gonna love our hobbies!</p>
+<script type="text/javascript" src="greetings.js"></script>
+</head>
+<body>
+<!--remove if css is messed up-->
+<link href="http://ajax.aspnetcdn.com/ajax/bootstrap/4.2.0/css/bootstrap.css" rel="stylesheet" />
+  <!--Website Header-->
+    <header>
+    <h1>Hobbies</h1>
+      <nav class="topnav" id="myTopnav">
+          <a href="index.html" class="active">Home</a>
+          <a href="Marcella.html" target="_blank">Marcella</a>
+          <a href="Oliver.html" target="_blank">Oliver</a>
+          <a href="Quynh.html" target="_blank">Quynh</a>
+          <a href="phuc.html" target="_blank">Phuc</a>
+          <a href="Isidro.html" target="_blank">Isidro</a>
+          <a href="googlemap.html" target="_blank">Google Map</a>
+          <a href="timer.html" target="_blank">Timer</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+      </nav>
+    </header>
+    
+    <!--This is where the current main photo lives -->
+  <main class="wrapper">
+      <picture class="profile">
+          <source media="(min-width: 1200px)" srcset="images/desktop.jpg">
+          <source media="(min-width: 501px)" srcset="images/tablet.jpg">
+          <img id="coverimage" src="images/phone.jpg" alt="That's me!"> 
+      </picture>   
+      <!--About us section-->
+      <h2 class="subheader">About Us</h2>
+      <p>Hello and welcome, thank you for being here today! This page was created by: Marcella Touch, Oliver Warlick, Quynh Nguyen, Phuc Nguyen, Isidro Lucatero .</p>
+      <p>This webpage talks about some of our favorite hobbies.</p>
+      <p>We built this site using VS Code, Miro, and GitHub.</p>
+    <p>You are gonna love our hobbies!</p>
 
 <!--List Items-->
-<form>
+  <button ng-click="toggleNgClass = !toggleNgClass">View Form</button>
+  <div ng-class="{'animationClass' : toggleNgClass}" class="firstJsAnimation">
+<form action="https://postman-echo.com/post" method="POST">
   <label for="fname">First name:</label><br>
   <input type="text" id="fname" name="fname"><br>
   <label for="lname">Last name:</label><br>
   <input type="text" id="lname" name="lname"><br><br>
   <input type="submit" value="Submit" onclick="wawa()">
 </form> 
+
+  </div>
 
     <p> What are your favorite hobbies?</p>
       <ul>
@@ -66,7 +72,10 @@
      </p>
     </footer>
   </main>
-     
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-animate.min.js"></script>
+  <script src="angular.js"></script>
   <!-- Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon -->
     <script>
     //https://tinyurl.com/dynamic-html-checker

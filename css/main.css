@@ -1,127 +1,187 @@
 /* Global rules */
 
-@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@600;700&family=Chivo:ital,wght@1,200&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme:wght@600;700&family=Chivo:ital,wght@1,200&display=swap");
 
 html {
-    background-color: #9aa4ec;
+  background-color: #9aa4ec;
 
-    font-family: 'Chivo', serif;
-    font-size: 0.95em;
-    line-height: 1.5em;
+  font-family: "Chivo", serif;
+  font-size: 0.95em;
+  line-height: 1.5em;
 }
 
 ::selection {
-    color: #0000002c; 
-    background:#F2F1EF;
+  color: #0000002c;
+  background: #f2f1ef;
 }
 
 h1 {
-    font-weight: normal;
-    margin: auto;
-    background: #948383;
-    line-height: 2.5em;
+  font-weight: normal;
+  margin: auto;
+  background: #948383;
+  line-height: 2.5em;
 }
 
 main.wrapper {
-    background-color: rgb(186, 178, 178);
-    overflow: auto;
+  background-color: rgb(186, 178, 178);
+  overflow: auto;
 }
 
 p {
-    margin: 1em; /* Top Right Bottom Left (TRBL) */
+  margin: 1em; /* Top Right Bottom Left (TRBL) */
 }
 
-h2,h3 {
-    font-weight: normal;
-    margin-left: 1em;
-    line-height: 1em;
+h2,
+h3 {
+  font-weight: normal;
+  margin-left: 1em;
+  line-height: 1em;
 }
 
 a {
-    color:rgba(0, 139, 139, 0.412);
-    text-decoration: none;
+  color: rgba(0, 139, 139, 0.412);
+  text-decoration: none;
 }
 
 a:hover {
-    color: rgba(245, 245, 245, 0.674);
-    background-color: rgb(0, 139, 95);
-    text-decoration: none;
+  color: rgba(245, 245, 245, 0.674);
+  background-color: rgb(0, 139, 95);
+  text-decoration: none;
+}
+
+#coverimage {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#coverimage {
+  animation: fadeInOut 4s infinite;
+  -webkit-animation: fadeInOut 4s infinite;
+  -moz-animation: fadeInOut 4s infinite;
+  -o-animation: fadeInOut 4s infinite;
+  -ms-animation: fadeInOut 4s infinite;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 footer {
-    clear: both;
-    text-align: center;
-    padding: 1em;
+  clear: both;
+  text-align: center;
+  padding: 1em;
 }
 /*<!--Responsive Layout with Flexbox and Media Queries:-->*/
 .topnav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .topnav {
+    flex-direction: column;
   }
-  
-  @media (max-width: 768px) {
-    .topnav {
-      flex-direction: column;
-    }
-  }
+}
 
 /* Responsive rules */
 
 /* DESKTOP */
-@media all and (min-width:1200px) {
-    main.wrapper {
-        width: 80%;
-        margin: auto;
-    }
-    
-    h1 {
-        width: 79%;
-        padding-left: 1%;
-    }
-    
-    picture.profile img {
-        width: 50%;
-        float: left;
-        margin-right: 2em;
-    }
-    
+@media all and (min-width: 1200px) {
+  main.wrapper {
+    width: 80%;
+    margin: auto;
+  }
+
+  h1 {
+    width: 79%;
+    padding-left: 1%;
+  }
+
+  picture.profile img {
+    width: 50%;
+    float: left;
+    margin-right: 2em;
+  }
 }
 
 /* TABLET */
-@media all and (min-width:501px) and (max-width:1199px) {
-    main.wrapper {
-        width: 90%;
-        margin: auto;
-    }
-    
-    h1 {
-        width: 89%;
-        padding-left: 1%;
-    }
-    
-    picture.profile img {
-        width: 50%;
-        float: right;
-        margin-left: 1em;
-    }
+@media all and (min-width: 501px) and (max-width: 1199px) {
+  main.wrapper {
+    width: 90%;
+    margin: auto;
+  }
 
+  h1 {
+    width: 89%;
+    padding-left: 1%;
+  }
+
+  picture.profile img {
+    width: 50%;
+    float: right;
+    margin-left: 1em;
+  }
 }
 
 /* PHONE */
-@media all and (max-width:500px) {
-    main.wrapper {
-        width: 100%;
-    }
-    
-    h1 {
-        width: 99%;
-        padding-left: 1%;
-    }
-    
-    picture.profile img {
-        width: 100%;
-    }
-    
+@media all and (max-width: 500px) {
+  main.wrapper {
+    width: 100%;
+  }
+
+  h1 {
+    width: 99%;
+    padding-left: 1%;
+  }
+
+  picture.profile img {
+    width: 100%;
+  }
 }
