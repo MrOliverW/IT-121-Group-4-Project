@@ -9,14 +9,14 @@
 
 .topnav {
     margin: auto;
-    background-color: rgb(176, 201, 190);
+    background-color: #31572C;
     overflow: auto;
 }
 
 .topnav a {
     float: left;
     display: block;
-    color: greenyellow;
+    color: white;
     text-align: center;
     padding: 12px 12px;
     text-decoration: none;
@@ -25,7 +25,7 @@
 }
 
 .topnav a.hover, .active {
-    background-color: lightcoral;
+    background-color: #4ec78f;
 }
 
 .topnav .icon {
@@ -87,31 +87,48 @@
 
 
 html {
-    background-color:white;
-    font-family: 'Chivo', serif;
+    background-color:#809D4B;
+    font-family: 'BioRhyme', serif;
     font-size: 0.95em;
     line-height: 1.5em;
 }
 
 ::selection {
-    color: #0000002c; 
-    background:#F2F1EF;
+    color: #709041; 
+    background:#5f836c;
 }
 
 h1 {
     font-weight: normal;
     margin: auto;
-    background: #948383;
+    background: #486F2D;
     line-height: 2.5em;
 }
 
 main.wrapper {
-    background-color: rgb(186, 178, 178);
+    background-color:#eddea4;
     overflow: auto;
 }
 
 p {
     margin: 1em; /* Top Right Bottom Left (TRBL) */
+    font-size: 18px;
+    font-weight: 500px;
+    margin-top: 10px; 
+    text-align: left;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    font-family: "Della Respira", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2{
+    margin-top: 200px;
+    font-family: "Euphoria Script", cursive;
+    font-weight: 400;
+    font-size: 30px;
+    font-style: normal;
 }
 
 h2,h3 {
@@ -121,8 +138,11 @@ h2,h3 {
 }
 
 a {
-    color:rgba(0, 139, 139, 0.412);
+    color:#90a955 ;
     text-decoration: none;
+    font-family: "Kiwi Maru", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 a:hover {
@@ -206,4 +226,16 @@ footer {
         width: 100%;
     }
     
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+div .tennis #Tennis {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-bottom: 50px;
 }
