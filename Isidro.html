@@ -1,60 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <title>Isidro's Hobbies</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/forms.css">
 
 
+    <script>
+        alert("Welcome to Isidro's Page!");
+    </script>
+
+    <style>
+        p{
+            font-size:1.2rem;
+        }
+    </style>
 </head>
+
 <body>
-<header>
-
+    <header>
     <h1>Isidro's Hobbies</h1>
+        <nav class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Home</a>
+            <a href="Marcella.html" target="_blank">Marcella</a>
+            <a href="Oliver.html" target="_blank">Oliver</a>
+            <a href="Quynh.html" target="_blank">Quynh</a>
+            <a href="phuc.html" target="_blank">Phuc</a>
+            <a href="Isidro.html" target="_blank">Isidro</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </nav>
+    </header>
+     
+<main class="wrapper">
+    <div style="display:flex;">
 
-    <nav class="topnav" id="myTopnav">
-        <a href="index.html" class="active">Home</a>
-        <a href="Marcella.html" target="_blank">Marcella</a>
-        <a href="Oliver.html" target="_blank">Oliver</a>
-        <a href="Quynh.html" target="_blank">Quynh</a>
-        <a href="phuc.html" target="_blank">Phuc</a>
-        <a href="Isidro.html" target="_blank">Isidro</a>
+        <picture>
+            <source media="(min-width: 1200px)" srcset="images/Isidro.jpg">
+            <img  style="max-width:750px;" src="images/Isidro.jpg" alt="Me">
+        </picture>
 
-    </nav>
-</header>
+        <div>
+            <h2 class="subheader">About Me</h2>
+            <p>Hello, my name is Isidro. I'm currently a student at Year Up, learning software development. Despite my previous roles focusing on negotiation and interaction with contractors and homeowners, I'm thrilled to transition into the tech field.</p>
+        </div>
+    </div>
 
+        <p>My Hobbies</p>                
+       
+        <h2>Hiking</h2>
 
+        <p>I have a passion for outdoor activities. It's a relief stepping away fom being inside and being on in front of screens all day. The picture below is of my most recent hike to lake 22 where there is a nice view at the end.</p>
 
-    <li>Hiking</li>
-        <p></p>
-    <li>Watching movies</li>
-        <p></p>
-    <li>Gaming</li>
-        <p></p>
+        <img width="500" src="images\lake22.jpeg" alt="lake">
 
+        <h2>Watching movies</h2>
+
+        <p>Most of the free time I have to relax or before I go to sleep, I usually put on a movie or a show in the background. I usually stream everything and don't go into theaters as much anymore.</p>
+
+        <img width="500" src="images\movies.png" alt="streaming">
+
+        <h2>Gaming</h2>
+
+        <p>I have not been gaming for the past 7 years, although this is a new hobby I am getting back into. I've always had PlayStation, and I'm familiar with most of their exclusives. I recently built my own PC and am getting into gaming as soon as I have more free time and exploring more games to play.</p>
+
+        <img width="500" src="images\psgame.jpg" alt="psgames">
 
     <footer>
-        <p><small>&copy; 2021-<span id="this-year"></span> by
-            Marcella Touch, Oliver Warlick, Quynh Nguyen, Phuc Nguyen, Isidro Lucatero, All Rights Reserved ~
-            <a id="html-checker" href="#" target="_blank">Check HTML</a> ~
+        <p><small>&copy; 2021-<span id="this-year"></span> by 
+        Marcella Touch, Oliver Warlick, Quynh Nguyen, Phuc Nguyen, Isidro Lucatero, All Rights Reserved ~ 
+            <a id="html-checker" href="#" target="_blank">Check HTML</a> ~ 
             <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
         </p>
     </footer>
 
-
-
+</main>
+     
+  
 <script>
     //https://tinyurl.com/dynamic-html-checker
     document.getElementById("html-checker").setAttribute("href","https://validator.w3.org/nu/?doc=" + location.href);
-
-    document.getElementById("css-checker").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-
-
-</script>
-
+      
+    document.getElementById("css-checker").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href); 
+     
+    
+     let d = new Date(); let thisYear = d.getFullYear();
+     document.getElementById("this-year").innerHTML = thisYear;
+    
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }   
+</script> 
 </body>
 </html>
