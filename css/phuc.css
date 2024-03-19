@@ -163,18 +163,72 @@ footer {
     justify-content: space-between;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     .topnav {
       flex-direction: column;
     }
   }
+
+  .tennis-text {
+    position: right;
+    top: 20px; /* position where the photography text starts */
+    left: 20px; /* position from the left to align with your text in the image */
+    width: 300px; /* width of the text block */
+    font-size: 14px; /* match the font size to the image */
+    color: #000; /* match the font color to the image text color */
+    padding: 5px; /* to give some space inside the text block */
+    border-radius: 5px; /* if you want rounded corners */
+    line-height: 1.4; /* to adjust the line spacing */
+    width: 100%; /* or the width of your image */
+    height: auto
+  }
+  .tennis-content{
+    position: relative;
+  }
+
+  .photography-text {
+    position: right;
+    top: 20px; /* position where the photography text starts */
+    left: 20px; /* position from the left to align with your text in the image */
+    width: 300px; /* width of the text block */
+    font-size: 14px; /* match the font size to the image */
+    color: #000; /* match the font color to the image text color */
+    padding: 5px; /* to give some space inside the text block */
+    border-radius: 5px; /* if you want rounded corners */
+    line-height: 1.4; /* to adjust the line spacing */
+    width: 100%; /* or the width of your image */
+    height: auto
+  }
+
+  .photography-content{
+    position: relative;
+  }
+
+  .gaming-text {
+    position: right;
+    top: 20px; /* position where the photography text starts */
+    left: 20px; /* position from the left to align with your text in the image */
+    width: 300px; /* width of the text block */
+    font-size: 14px; /* match the font size to the image */
+    color: #000; /* match the font color to the image text color */
+    padding: 5px; /* to give some space inside the text block */
+    border-radius: 5px; /* if you want rounded corners */
+    line-height: 1.4; /* to adjust the line spacing */
+    width: 100%; /* or the width of your image */
+    height: auto
+  }
+
+  .gaming-content{
+    position: relative;
+  }
+
 
 /* Responsive rules */
 
 /* DESKTOP */
 @media all and (min-width:1200px) {
     main.wrapper {
-        width: 80%;
+        width: 100%;
         margin: auto;
     }
     
@@ -188,13 +242,42 @@ footer {
         float: left;
         margin-right: 2em;
     }
+      .tennis-image img {
+        width: 20%;
+        float: left;
+        margin-right: 1em; 
+      }
+
+      .photography-image img {
+        width: 20%;
+        float: left;
+        margin-right: 1em; 
+      }
+
+      .gaming-image img {
+        width: 20%;
+        float: left;
+        margin-right: 1em; 
+      }
+
+      .reading-image img {
+        width: 20%;
+        float: left;
+        margin-right: 1em; 
+      }
+
+      .film-image img {
+        width: 20%;
+        float: left;
+        margin-right: 1em; 
+      }
     
 }
 
 /* TABLET */
 @media all and (min-width:501px) and (max-width:1199px) {
     main.wrapper {
-        width: 90%;
+        width: 100%;
         margin: auto;
     }
     
@@ -208,6 +291,23 @@ footer {
         float: right;
         margin-left: 1em;
     }
+
+    .tennis-content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+    .tennis-text {
+        flex-basis: 70%;
+        margin-right: 2em; /* Adjust the spacing between text and image */
+      }
+      .tennis-picture img {
+        flex-basis: 30%; /* Adjust image size to be smaller than text */
+        display: block; /* To remove any default margins or padding */
+
+        
+      }
 
 }
 
@@ -225,17 +325,25 @@ footer {
     picture.profile img {
         width: 100%;
     }
+
+    .tennis-content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+    .tennis-text {
+        flex-basis: 70%;
+        margin-right: 2em; /* Adjust the spacing between text and image */
+      }
+      .tennis-picture img {
+        flex-basis: 30%; /* Adjust image size to be smaller than text */
+        display: block; /* To remove any default margins or padding */
+        
+      }
     
 }
 
 html {
     scroll-behavior: smooth;
   }
-
-div .tennis #Tennis {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-    margin-bottom: 50px;
-}
